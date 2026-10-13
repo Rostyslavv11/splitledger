@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+
+# Node (for later)
+node_modules/
+dist/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
