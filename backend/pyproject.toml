@@ -20,3 +20,27 @@ dev = [
     "pytest-asyncio>=1.4.0",
     "ruff>=0.16.9",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors (style)
+    "F",      # pyflakes (unused imports, undefined names)
+    "I",      # import sorting
+    "B",      # bugbear (likely bugs)
+    "UP",     # pyupgrade (use modern Python syntax)
+    "SIM",    # simplifications
+    "ASYNC",  # async mistakes, e.g. blocking calls in async functions
+]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
